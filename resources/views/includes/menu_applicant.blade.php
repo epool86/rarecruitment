@@ -36,7 +36,7 @@ if(!function_exists('classActive')){
         </a>
         <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="buttons.html">Search Jobs</a>
+                <a class="collapse-item" href="{{ route('applicant.search') }}">Search Jobs</a>
                 <a class="collapse-item" href="buttons.html">My Jobs</a>
             </div>
         </div>
@@ -51,7 +51,8 @@ if(!function_exists('classActive')){
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{ route('account') }}">Update Profile</a>
+                <a class="collapse-item" href="{{ route('applicant.resume.show') }}">Update Profile</a>
+                <a class="collapse-item" href="{{ route('account') }}">Update Account</a>
                 <a class="collapse-item" href="buttons.html">Setting</a>
             </div>
         </div>
