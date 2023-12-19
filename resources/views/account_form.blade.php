@@ -12,7 +12,7 @@
         </div>
         @endif
 
-		<form method="POST" action="{{ route('account.account.post') }}">
+		<form method="POST" action="{{ route('account.post') }}">
 		@csrf
 
 			<div class="form-group">

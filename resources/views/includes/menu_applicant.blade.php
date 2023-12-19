@@ -51,7 +51,7 @@ if(!function_exists('classActive')){
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{ route('account.account') }}">Update Profile</a>
+                <a class="collapse-item" href="{{ route('account') }}">Update Profile</a>
                 <a class="collapse-item" href="buttons.html">Setting</a>
             </div>
         </div>

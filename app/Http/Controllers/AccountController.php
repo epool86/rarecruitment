@@ -45,7 +45,7 @@ class AccountController extends Controller
         $user->save();
 
         Session()->flash('success-msg', 'Your profile has been updated.');
-        return redirect()->route('account.account');
+        return redirect()->route('account');
 
     }
 }
