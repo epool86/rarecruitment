@@ -37,7 +37,7 @@ if(!function_exists('classActive')){
         <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{ route('applicant.search') }}">Search Jobs</a>
-                <a class="collapse-item" href="buttons.html">My Jobs</a>
+                <a class="collapse-item" href="{{ route('applicant.history') }}">My Jobs</a>
             </div>
         </div>
     </li>

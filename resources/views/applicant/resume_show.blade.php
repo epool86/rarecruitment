@@ -22,7 +22,8 @@
 						<td>Photo</td>
 						<td>
 							@if($profile->photo)
-								<img src="{{ asset($profile->photo) }}">
+								<img src="{{ asset('uploads/photo/'.$profile->photo).'?'.time() }}">
+								<img src="{{ asset('uploads/photo/thumbnail_'.$profile->photo).'?'.time() }}">
 							@else
 								No Photo
 							@endif

@@ -1,3 +1,9 @@
+<?php 
+$user = Auth::user();
+if($user->role == 'applicant'){
+    $profile = $user->profile()->first() ? $user->profile()->first() : new Profile; 
+}
+?>
 <!-- Topbar -->
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
@@ -171,8 +177,13 @@
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
+                @if($user->role == 'applicant')
                 <img class="img-profile rounded-circle"
-                    src="{{ asset('templates/img/undraw_profile.svg') }}">
+                    src="{{ asset('uploads/photo/thumbnail_'.$profile->photo).'?'.time() }}">
+                @else 
+                <img class="img-profile rounded-circle"
+                    src="">
+                @endif
             </a>
             <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

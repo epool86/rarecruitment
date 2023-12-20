@@ -110,6 +110,8 @@
     <script src="{{ asset('templates/js/demo/chart-area-demo.js') }}"></script>
     <script src="{{ asset('templates/js/demo/chart-pie-demo.js') }}"></script>
 
+    @yield('bottom_script')
+
 </body>
 
 </html>
