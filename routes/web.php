@@ -50,6 +50,10 @@ Route::group(['middleware' => ['auth']], function(){
         'middleware' => ['employer'],
     ], function(){
 
+        Route::get('/application/ajax', [App\Http\Controllers\Employer\ApplicationController::class, 'ajax'])->name('application.ajax');
+        Route::get('/application/summary', [App\Http\Controllers\Employer\ApplicationController::class, 'summary'])->name('application.summary');
+        Route::get('/application/pdf', [App\Http\Controllers\Employer\ApplicationController::class, 'export'])->name('application.export');
+        Route::get('/application/excel', [App\Http\Controllers\Employer\ApplicationController::class, 'exportExcel'])->name('application.exportExcel');
         Route::resource('application', 'App\Http\Controllers\Employer\ApplicationController');
         Route::resource('job', 'App\Http\Controllers\Employer\JobController');
 
